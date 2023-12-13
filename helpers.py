@@ -1,3 +1,6 @@
+from pylab import *
+
+
 def set_up_dependencies():
     import pandas as pd
     from pathlib import Path
@@ -5,12 +8,12 @@ def set_up_dependencies():
     import numpy as np
     import requests
     from scipy.stats import linregress
-
-def box_plot(plt, plot_dict, xlabel, ylabel):
+    
+def box_plot(plt, plot_dict, xlabel, ylabel, output_name):
     fig1, ax1 = plt.subplots()
     ax1.set_ylabel(ylabel)
     ax1.set_xlabel(xlabel)
-    ax1.boxplot(
+    plot = ax1.boxplot(
         plot_dict.values(), 
         flierprops = dict(
             markersize= 10, 
@@ -18,7 +21,16 @@ def box_plot(plt, plot_dict, xlabel, ylabel):
         ),
         showmeans=True
     )
+    for line in plot['medians']:
+        x, y = line.get_xydata()[1]
+        text(x, y, '%.1f' % y, horizontalalignment='right')
+    for line in plot['means']:
+        x, y = line.get_xydata()[0]
+        
+        text(x, y, '%.1f' % y, horizontalalignment='right')
+    
     ax1.set_xticklabels(plot_dict.keys())
+    plt.savefig(output_name)
     plt.show()
 
 
