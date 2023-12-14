@@ -9,6 +9,7 @@ A group project assignment for the University of Toronto Data Boot Camp - Octobe
 **Mustafa Khan**  
 
 ## Repository Structure and File Location
+**Formal submission located in the 'main' branch of the repository.  
 - \README.md (This File)
     - \Arthritis\'Statitiscal Analysis of the Incidence of Arthritis.ipynb': Jupyter Notebook 
     - \Depression\'Statistical Analysis of the Incidence of Depression.ipynb': Jupyter Notebook
