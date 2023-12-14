@@ -23,4 +23,8 @@ A group project assignment for the University of Toronto Data Boot Camp - Octobe
     - \Other_Cancer\other_cancer_analysis.ipynb: Jupyter Notebook
     - \Other_Cancer\helpers.py: pyton script support jupyter notebook other_cancers.ipynb
         - \Other_Cancer\output_data\: locations for png's of related data plots
+    -\datasets\CVD_cleaned.csv: dataset file being analyzed.
+ 
+ ## Execution
+Each Jupyter notebook is to be run from the within the folder in which it is located to ensure file input and output pathing is referenced correctly.
     
